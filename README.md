@@ -25,15 +25,23 @@ Copy the `_modules` and the `_states` to your `base` file roots or gitfs repo, t
 ### Dynamic Teleport Node Authentication Token
 
 Template File
-```yaml config.tmpl
+
+```yaml
 teleport:
   token: {{ token }}
 
 ssh_service:
   enabled: yes
+
+auth_service:
+  enabled: no
+
+proxy_service:
+  enabled: no
 ```
 
 SLS File
+
 ```yaml
 teleport-config:
   file.managed:
