@@ -2,7 +2,7 @@
 '''
 :maintainer:    Erik Kristensen <erik@erikkristensen.com>
 :maturity:      new
-:depends:       python-requests
+:depends:       teleport
 :platform:      all
 
 Interact with Gravitational Teleport

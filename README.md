@@ -24,7 +24,8 @@ Copy the `_modules` and the `_states` to your `base` file roots or gitfs repo, t
 
 ### Dynamic Teleport Node Authentication Token
 
-```jinja config.tmpl
+Template File
+```yaml config.tmpl
 teleport:
   token: {{ token }}
 
@@ -32,6 +33,7 @@ ssh_service:
   enabled: yes
 ```
 
+SLS File
 ```yaml
 teleport-config:
   file.managed:

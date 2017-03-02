@@ -2,7 +2,7 @@
 '''
 :maintainer:    Erik Kristensen <erik@erikkristensen.com>
 :maturity:      new
-:depends:       python-requests
+:depends:       teleport
 :platform:      all
 
 Interact with Gravitational Teleport
@@ -384,6 +384,15 @@ def users_list(failhard=True, ignore_retcode=False, redirect_stderr=False, debug
     
 
 def users_exists(login):
+    '''
+    Checks if Teleport User Exists
+
+    CLI Example:
+
+    .. code-block:: bash
+
+        salt '*' teleport.users_exists ekristen
+    '''
     existing_users = users_list()['users']
     for entry in existing_users:
         if entry['user'] == login:
