@@ -22,7 +22,7 @@ def __virtual__():
     '''
     Only load if tctl exists on the system
     '''
-    if salt.utils.which('tctl') is None:
+    if salt.utils.path.which('tctl') is None:
         return (False, 'The tctl execution module cannot be loaded: tctl unavailable.')
     else:
         return True
